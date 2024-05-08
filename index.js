@@ -295,14 +295,14 @@ async function serverData ({
     sendDataLayer({sku:skuNumber})
   };
 
-  setTimeout(()=>{
-    MudiExperience({
-      tokenApi:'Q8QBxQqkofUKDbdQu7dG',
-      skuNumber:'8622810411U',
-      idCompanyMudi:'0',
-      color:'#d73e46',
-      containerBtns:document.body.querySelector('#multimedia-gallery'),
-      zIndexModal:1000000,
-    });
+  // setTimeout(()=>{
+  //   MudiExperience({
+  //     tokenApi:'Q8QBxQqkofUKDbdQu7dG',
+  //     skuNumber:'8622810411U',
+  //     idCompanyMudi:'0',
+  //     color:'#d73e46',
+  //     containerBtns:document.body.querySelector('#multimedia-gallery'),
+  //     zIndexModal:1000000,
+  //   });
   
-  },6000)
+  // },6000)
