@@ -297,11 +297,11 @@ async function serverData ({
 
   setTimeout(()=>{
     MudiExperience({
-      tokenApi:'LXhG4UEYLjdz5fiN3AUr',
-      skuNumber:document.querySelector('.value-field.item').innerHTML,
+      tokenApi:'Q8QBxQqkofUKDbdQu7dG',
+      skuNumber:'8622810411U',
       idCompanyMudi:'0',
       color:'#d73e46',
-      containerBtns:document.querySelector('.zoomPad'),
+      containerBtns:document.body.querySelector('#multimedia-gallery'),
       zIndexModal:1000000,
     });
   
