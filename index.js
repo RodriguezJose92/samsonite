@@ -295,14 +295,14 @@ async function serverData ({
     sendDataLayer({sku:skuNumber})
   };
 
-  // setTimeout(()=>{
-  //   MudiExperience({
-  //     tokenApi:'Q8QBxQqkofUKDbdQu7dG',
-  //     skuNumber:'8622810411U',
-  //     idCompanyMudi:'0',
-  //     color:'#d73e46',
-  //     containerBtns:document.body.querySelector('#multimedia-gallery'),
-  //     zIndexModal:1000000,
-  //   });
+  setTimeout(()=>{
+     MudiExperience({
+       tokenApi:'Q8QBxQqkofUKDbdQu7dG',
+       skuNumber:document.body.querySelector("#MainProduct-template--16032363479201__main > div.product.tw-w-full.product--stacked.\\!tw-grid-system.\\!tw-mx-0 > div.tw-col-span-full.tw-p-\\[10px\\].md\\:tw-col-span-4.lg\\:tw-col-start-8.lg\\:tw-col-span-5.lg\\:tw-mt-0 > div > div.tw-mt-\\[12px\\].tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, ""),
+       idCompanyMudi:'0',
+       color:'#d73e46',
+       containerBtns:document.body.querySelector('#multimedia-gallery'),
+       zIndexModal:1000000,
+     });
   
-  // },6000)
+   },2000)
