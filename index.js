@@ -79,7 +79,7 @@ class MudiExperience{
                           fill:#f4f4f4;
                       }
                       .cls-3{
-                          fill:#522c1c;
+                          fill:#000;
                       }
                   </style>
               </defs>
@@ -331,7 +331,7 @@ let skuNumberSamsonite  = null;
 /** verify DomElement */
 async function verifyDomElement(){
 
-  let content     = document.body.querySelectorAll(`.slider-mobile-gutter`)[1];
+  let content     = document.body.querySelector(`#MainProduct-template--16032363479201__main > div.product.tw-w-full.product--stacked.\\!tw-grid-system.\\!tw-mx-0 > div.tw-col-span-full.md\\:tw-col-span-4.lg\\:tw-col-span-6`);
 
   if( content && skuNumberSamsonite ) await mudiExperience.experienceOn( skuNumberSamsonite , content)
   else if( verifycontent >1500 ) throw new Error('FatherContainer undefined, verify selector JS')
