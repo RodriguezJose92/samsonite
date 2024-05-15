@@ -304,5 +304,7 @@ async function serverData ({
        containerBtns:document.body.querySelector('#multimedia-gallery'),
        zIndexModal:1000000,
      });
+
+console.log('Entrando a Mudi')
   
    },2000)
