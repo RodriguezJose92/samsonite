@@ -1,3 +1,7 @@
+:root {
+    --backgroundTooltip: #1e3859
+}
+
 .deployMundi {
     position: absolute;
     width: 36%;
@@ -28,7 +32,7 @@
 }
 
 .tooltipMudi {
-    background-color: #cf7247;
+    background-color: var(--backgroundTooltip);
     color: white;
     font-family: sans-serif;
     width: 360px;
@@ -49,7 +53,7 @@
     right: 10%;
     width: 10px;
     border-bottom-right-radius: 50px;
-    background-color: #cf7247;
+    background-color: var(--backgroundTooltip);
     color: transparent;
 }
 
@@ -253,7 +257,7 @@
     }
 
     .tooltipMudi {
-        background-color: #cf7247;
+        background-color: var(--backgroundTooltip);
         color: white;
         font-family: sans-serif;
         width: 360px;
