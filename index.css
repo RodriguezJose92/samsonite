@@ -21,7 +21,7 @@ div#multimedia-gallery{
     height: max-content;
     right: 1%;
     top: 0%;
-    z-index: 1;
+    z-index: 10;
 }
 
 .btnMudi3D {
@@ -76,7 +76,7 @@ div#multimedia-gallery{
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.416);
-    z-index: 10000000;
+    z-index: 100000000000;
     backdrop-filter: blur(5px);
 }
 
