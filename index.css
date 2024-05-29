@@ -17,11 +17,11 @@ div#multimedia-gallery{
 
 .btnsMudiContainer {
     position: absolute;
-    width: max-content;
-    height: max-content;
+    width: 100px;
+    height: 100px;
     right: 1%;
     top: 0%;
-    z-index: 10;
+    z-index: 100;
 }
 
 .btnMudi3D {
