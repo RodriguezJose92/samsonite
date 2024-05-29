@@ -21,7 +21,7 @@ div#multimedia-gallery{
     height: 100px;
     right: 1%;
     top: 0%;
-    z-index: 100;
+    z-index: 10;
 }
 
 .btnMudi3D {
@@ -260,7 +260,7 @@ div#multimedia-gallery{
         height: max-content;
         right: 1%;
         top: 0%;
-        z-index: 1;
+        z-index: 10;
     }
 
     .tooltipMudi {
