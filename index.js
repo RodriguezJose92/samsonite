@@ -21,7 +21,7 @@ class MudiExperience{
           request = await fetch('https://mudiview.mudi.com.co:7443/product/getProductsUrl',{
               method:'POST',
               headers:{   "Content-type":"application/json",
-                          "tokenapi":"Q8QBxQqkofUKDbdQu7dG"
+                          "tokenapi":"iHQr38MWcxTpZtsQLRDk"
               },
               body: JSON.stringify(myBody)
           })
@@ -331,7 +331,7 @@ let skuNumberSamsonite  = null;
 /** verify DomElement */
 async function verifyDomElement(){
 
-  let content     = document.body.querySelector(`#MainProduct-template--16032363479201__main > div.product.tw-w-full.product--stacked.\\!tw-grid-system.\\!tw-mx-0 > div.tw-col-span-full.md\\:tw-col-span-4.lg\\:tw-col-span-6`);
+  let content     = document.body.querySelector(`#multimedia-gallery`);
 
   if( content && skuNumberSamsonite ) await mudiExperience.experienceOn( skuNumberSamsonite , content)
   else if( verifycontent >1500 ) throw new Error('FatherContainer undefined, verify selector JS')
@@ -348,13 +348,13 @@ async function verifySku(){
   if(verifycontent > 2500 ) throw new Error('Skunumber undefined, verify selector JS');
 
   let 
-  skuOrigin = document.body.querySelector("#MainProduct-template--16032363479201__main > div.product.tw-w-full.product--stacked.\\!tw-grid-system.\\!tw-mx-0 > div.tw-col-span-full.tw-p-\\[10px\\].md\\:tw-col-span-4.lg\\:tw-col-start-8.lg\\:tw-col-span-5.lg\\:tw-mt-0 > div > div.tw-mt-\\[12px\\].tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
+  skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
   !skuOrigin && (
       verifycontent ++ ,
       requestAnimationFrame(verifySku)
   )
 
-  skuNumberSamsonite = skuOrigin;
+  skuNumberSamsonite = skuOrigin+'_MEX';
 };
 
 await verifySku();
