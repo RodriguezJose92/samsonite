@@ -333,7 +333,10 @@ async function verifyDomElement(){
 
   let content     = document.body.querySelector(`#multimedia-gallery`);
 
-  if( content && skuNumberSamsonite ) await mudiExperience.experienceOn( skuNumberSamsonite , content)
+  if( content && skuNumberSamsonite ) { 
+    content.parentNode.style.position="relative";
+    await mudiExperience.experienceOn( skuNumberSamsonite , content.parentNode) 
+  }
   else if( verifycontent >1500 ) throw new Error('FatherContainer undefined, verify selector JS')
   else {
     verifycontent++;
