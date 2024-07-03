@@ -351,11 +351,18 @@ async function verifySku(){
   if(verifycontent > 2500 ) throw new Error('Skunumber undefined, verify selector JS');
 
   let 
-  skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
+  skuOrigin = null
+
   !skuOrigin && (
       verifycontent ++ ,
       requestAnimationFrame(verifySku)
   )
+
+  if( navigator.userAgent.includes('iPhone') && window.innerWidth < 500 ){
+    skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p > a").innerHTML + 'U'
+  }else {
+    skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
+  }
 
   skuNumberSamsonite = skuOrigin+'_MEX';
 };
