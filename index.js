@@ -370,33 +370,38 @@ async function verifySku(){
 
   switch(country){
 
-    case country.includes('.ar'):
-        countryActual = '_AR'
+    case 'samsonite.com.ar':
+        countryActual = '_AR';
+        skuNumberSamsonite = skuOrigin+countryActual;
         break;
 
-    case country.includes('.cl'):
-        countryActual = '_CHIL'
+    case 'samsonite.cl':
+        countryActual = '_CHIL';
+        skuNumberSamsonite = skuOrigin+countryActual;
         break;
 
-    case country.includes('.pe'):
-        countryActual = '_PER'
+    case 'samsonite.com.pe':
+        countryActual = '_PER';
+        skuNumberSamsonite = skuOrigin+countryActual;
         break;
 
-    case country.includes('.co'):
-        countryActual = '_COL'
+    case 'samsonite.com.co':
+        countryActual = '_COL';
+        skuNumberSamsonite = skuOrigin+countryActual;
         break;
 
-    case country.includes('.br'):
-        countryActual = '_BRA'
+    case 'samsonite.com.br':
+        countryActual = '_BRA';
+        skuNumberSamsonite = skuOrigin+countryActual;
         break;
         
-    case country.includes('.mx'):
-        countryActual = '_MEX'
+    case 'samsonite.com.mx':
+        countryActual = '_MEX';
+        skuNumberSamsonite = skuOrigin+countryActual;
         break;
 
   };
 
-  skuNumberSamsonite = skuOrigin+countryActual;
 
 };
 
