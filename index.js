@@ -364,38 +364,40 @@ async function verifySku(){
     skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
   }
 
-  let country = window.location.host
+  let 
+  country = window.location.host ,
+  countryActual = null ;
 
   switch(country){
 
     case country.includes('.ar'):
-        country = '_AR'
+        countryActual = '_AR'
         break;
 
     case country.includes('.cl'):
-        country = '_CHIL'
+        countryActual = '_CHIL'
         break;
 
     case country.includes('.pe'):
-        country = '_PER'
+        countryActual = '_PER'
         break;
 
     case country.includes('.co'):
-        country = '_COL'
+        countryActual = '_COL'
         break;
 
     case country.includes('.br'):
-        country = '_BRA'
+        countryActual = '_BRA'
         break;
         
     case country.includes('.mx'):
-        country = '_MEX'
+        countryActual = '_MEX'
         break;
 
   };
 
-  skuNumberSamsonite = skuOrigin+country;
-  
+  skuNumberSamsonite = skuOrigin+countryActual;
+
 };
 
 await verifySku();
