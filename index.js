@@ -6,6 +6,7 @@ class MudiExperience{
       this.dataSever          = null;
       this.skuNumber          = null;
       this.fatherContainer    = null;
+      this.tokenApi           = null; 
   };
 
   /** Conect mudiServer  ✔️ */
@@ -21,7 +22,7 @@ class MudiExperience{
           request = await fetch('https://mudiview.mudi.com.co:7443/product/getProductsUrl',{
               method:'POST',
               headers:{   "Content-type":"application/json",
-                          "tokenapi":"iHQr38MWcxTpZtsQLRDk"
+                          "tokenapi": this.tokenApi
               },
               body: JSON.stringify(myBody)
           })
@@ -373,31 +374,37 @@ async function verifySku(){
     case 'samsonite.com.ar':
         countryActual = '_AR';
         skuNumberSamsonite = skuOrigin+countryActual;
+        this.tokenApi = 'nuhBKf82C4JGCs5P2GrW'
         break;
 
     case 'samsonite.cl':
         countryActual = '_CHIL';
         skuNumberSamsonite = skuOrigin+countryActual;
+        this.tokenApi = 'AuDLEFvjQwDJHmCYYb3z';
         break;
 
     case 'samsonite.com.pe':
         countryActual = '_PER';
         skuNumberSamsonite = skuOrigin+countryActual;
+        this.tokenApi = 'vX3WtJ6oLxm39SjHmHt6'
         break;
 
     case 'samsonite.com.co':
         countryActual = '_COL';
         skuNumberSamsonite = skuOrigin+countryActual;
+        this.tokenApi = 'jJDo4nSyQhhw8j5YXcTx'
         break;
 
     case 'samsonite.com.br':
         countryActual = '_BRA';
         skuNumberSamsonite = skuOrigin+countryActual;
+        this.tokenApi = '6jbgUzjeB4kh3GLxzRhY'
         break;
         
     case 'samsonite.com.mx':
         countryActual = '_MEX';
         skuNumberSamsonite = skuOrigin+countryActual;
+        this.tokenApi = 'iHQr38MWcxTpZtsQLRDk'
         break;
 
   };
