@@ -336,6 +336,7 @@ async function verifyDomElement(){
 
   if( content && skuNumberSamsonite ) { 
     content.parentNode.style.position="relative";
+    if( !window.location.href.includes('product') ) {return};
     await mudiExperience.experienceOn( skuNumberSamsonite , content.parentNode) 
   }
   else if( verifycontent >1500 ) throw new Error('FatherContainer undefined, verify selector JS')
