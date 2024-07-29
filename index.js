@@ -355,15 +355,16 @@ async function verifySku(){
   let 
   skuOrigin = null
 
-  !skuOrigin && (
-      verifycontent ++ ,
-      requestAnimationFrame(verifySku)
-  )
-
   if( navigator.userAgent.includes('iPhone') && window.innerWidth < 500 ){
     skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p > a").innerHTML + 'U'
   }else {
     skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
+  }
+
+  if(!skuOrigin){
+      verifycontent ++ ,
+      requestAnimationFrame(verifySku)
+      return
   }
 
   let 
