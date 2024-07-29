@@ -357,6 +357,11 @@ async function verifySku(){
 
   if( navigator.userAgent.includes('iPhone') && window.innerWidth < 500 ){
     skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p > a").innerHTML + 'U'
+
+    if( window.location.host == 'samsonite.com.pe' ||  window.location.host == 'samsonite.cl'){
+       skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "")
+    }
+
   }else {
     skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "");
   }
