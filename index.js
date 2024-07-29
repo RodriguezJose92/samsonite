@@ -359,7 +359,9 @@ async function verifySku(){
     skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p > a").innerHTML + 'U'
 
     if( window.location.host == 'samsonite.com.pe' ||  window.location.host == 'samsonite.cl'){
+        console.log('entre al condicional de chile y peru')
        skuOrigin = document.body.querySelector(".tw-flex.tw-flex-wrap.tw-justify-between > p").innerHTML.replace("SKU: " ,'').replace(/\s/g, "")
+      console.log(`chile y peru` + skuOrigin)
     }
 
   }else {
